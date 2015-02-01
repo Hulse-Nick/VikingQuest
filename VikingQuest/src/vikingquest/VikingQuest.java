@@ -40,23 +40,23 @@ public class VikingQuest {
  * The following function call sets the player's current location.
  * @author Nicholas
  */
-        Location LocationOne=new Location();
+        Location locationOne=new Location();
         
-        LocationOne.setxCoord(1.0);
-        LocationOne.setyCoord(1.0);
-        String playerLocation = LocationOne.toString();
+        locationOne.setxCoord(1.0);
+        locationOne.setyCoord(1.0);
+        String playerLocation = locationOne.toString();
         System.out.println(playerLocation);
            /**
  * The following function call sets the player's scene description
  * and if it is currently passable.
  * @author Nicholas
  */     
-        Scene SceneOne=new Scene();
+        Scene sceneOne=new Scene();
         
-        SceneOne.setDescription("You arrive on a beach");
-        SceneOne.setBlocked(false);
+        sceneOne.setDescription("You arrive on a beach");
+        sceneOne.setBlocked(false);
         
-        String playerScene = SceneOne.toString();
+        String playerScene = sceneOne.toString();
         System.out.println(playerScene);
         
           /**
@@ -64,24 +64,24 @@ public class VikingQuest {
  * and describes its weakness.
  * @author Nicholas
  */      
-        Obstacle ObstacleOne=new Obstacle();
+        Obstacle obstacleOne=new Obstacle();
         
-        ObstacleOne.setObstacleType("You see a pile of wood");
-        ObstacleOne.setWeakness("Wood is flamable");
+        obstacleOne.setObstacleType("You see a pile of wood");
+        obstacleOne.setWeakness("Wood is flamable");
         
-        String playerObstacle = ObstacleOne.toString();
+        String playerObstacle = obstacleOne.toString();
         System.out.println(playerObstacle);
    /**
  *  The following call sets the player's Ship information.
  * 
  * @author Nicholas
  */
-        Ship ShipOne=new Ship();
+        Ship shipOne=new Ship();
         
-        ShipOne.setTitle("Jolly Roger");
-        ShipOne.setHealth(100);
+        shipOne.setTitle("Jolly Roger");
+        shipOne.setHealth(100);
         
-        String playerShip = ShipOne.toString();
+        String playerShip = shipOne.toString();
         System.out.println(playerShip);
         
     }
