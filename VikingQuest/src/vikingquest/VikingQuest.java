@@ -16,6 +16,7 @@ import vikingquest.model.Player;
 import vikingquest.model.Scene;
 import vikingquest.model.Ship;
 import vikingquest.model.Actor;
+import vikingquest.model.Map;
 
 
 /**
@@ -85,11 +86,21 @@ public class VikingQuest {
         String playerShip = shipOne.toString();
         System.out.println(playerShip);
         
-        
+//    Madeleine got to work!    
+        //Here's the Actor (changed name because character seems to be a designated keyword)
         Actor actorOne=new Actor();
         
         actorOne.setName("Larry");
         String actorLarry = actorOne.toString();
         System.out.println(actorLarry);
+    
+        //Here's the Map
+        Map mapOne=new Map();
+        
+        mapOne.setxCount(2);
+        mapOne.setyCount(5);
+        String playerMap = mapOne.toString();
+        System.out.println(playerMap);
+    
     }
 }
