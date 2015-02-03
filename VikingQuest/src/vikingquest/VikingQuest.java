@@ -18,7 +18,8 @@ import vikingquest.model.Ship;
 import vikingquest.model.Actor;
 import vikingquest.model.Map;
 import vikingquest.model.Game;
-
+import vikingquest.model.NPC;
+import vikingquest.model.Item;
 
 /**
  *
@@ -112,8 +113,20 @@ public class VikingQuest {
         System.out.println(playerGame);
         
         //NPC class
+        NPC npcOne=new NPC();
+        
+        npcOne.setHas("Rope");
+        npcOne.setNeeds("A cracker");
+        String firstNPC = npcOne.toString();
+        System.out.println(firstNPC);
         
         //Item class
-    
+        Item itemOne=new Item();
+        
+        itemOne.setItemType("Rope");
+        itemOne.setNeededBy(firstNPC);
+        itemOne.setUsesLeft(1);
+        String npcHeldItem = itemOne.toString();
+        System.out.println(npcHeldItem);
     }
 }
