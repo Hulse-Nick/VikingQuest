@@ -15,6 +15,7 @@ import vikingquest.model.Obstacle;
 import vikingquest.model.Player;
 import vikingquest.model.Scene;
 import vikingquest.model.Ship;
+import vikingquest.model.Actor;
 
 
 /**
@@ -84,5 +85,11 @@ public class VikingQuest {
         String playerShip = shipOne.toString();
         System.out.println(playerShip);
         
+        
+        Actor actorOne=new Actor();
+        
+        actorOne.setName("Larry");
+        String actorLarry = actorOne.toString();
+        System.out.println(actorLarry);
     }
 }
