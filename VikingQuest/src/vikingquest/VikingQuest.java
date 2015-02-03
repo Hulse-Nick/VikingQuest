@@ -17,6 +17,7 @@ import vikingquest.model.Scene;
 import vikingquest.model.Ship;
 import vikingquest.model.Actor;
 import vikingquest.model.Map;
+import vikingquest.model.Game;
 
 
 /**
@@ -101,6 +102,18 @@ public class VikingQuest {
         mapOne.setyCount(5);
         String playerMap = mapOne.toString();
         System.out.println(playerMap);
+        
+        //Game class
+        Game gameOne=new Game();
+        
+        gameOne.setScore(80);
+        gameOne.setTimesBeaten(5);
+        String playerGame = gameOne.toString();
+        System.out.println(playerGame);
+        
+        //NPC class
+        
+        //Item class
     
     }
 }
