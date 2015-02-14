@@ -13,6 +13,7 @@ import vikingquest.model.Item;
 
 
 import vikingquest.control.CombatControl;
+import vikingquest.control.BridgeControl;
 /**
  *
  * @author Madeleine
@@ -123,6 +124,9 @@ public class VikingQuest {
     
         double showHit = CombatControl.hit(18,15);
         System.out.println(showHit);
+        
+        double move = BridgeControl.bridgeMove(80);
+        System.out.println(move);
     
     }
 }
