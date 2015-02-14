@@ -11,6 +11,8 @@ import vikingquest.model.Game;
 import vikingquest.model.NPC;
 import vikingquest.model.Item;
 
+
+import vikingquest.control.CombatControl;
 /**
  *
  * @author Madeleine
@@ -118,5 +120,16 @@ public class VikingQuest {
         itemOne.setUsesLeft(1);
         String npcHeldItem = itemOne.toString();
         System.out.println(npcHeldItem);
+    
+        double showHit = CombatControl.hit(18,15);
+        System.out.println(showHit);
+    
     }
 }
+
+
+
+
+
+
+        
