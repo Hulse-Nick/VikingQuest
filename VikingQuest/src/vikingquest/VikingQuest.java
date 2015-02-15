@@ -14,6 +14,7 @@ import vikingquest.model.Item;
 
 import vikingquest.control.CombatControl;
 import vikingquest.control.BridgeControl;
+import vikingquest.control.QuickSandControl;
 /**
  *
  * @author Madeleine
@@ -128,6 +129,15 @@ public class VikingQuest {
         double move = BridgeControl.bridgeMove(80);
         System.out.println(move);
     
+        // the following needs implemented into combatControl.java
+        double atk = 1;
+        double def = 1;
+           
+        
+        double pushOut = QuickSandControl.pushOut(atk,def );
+        System.out.println(pushOut+" Times pushed out.");
+        double holdStill = QuickSandControl.pushOut(atk,def);
+        System.out.println(holdStill +" Times held still.");
     }
 }
 
