@@ -129,15 +129,34 @@ public class VikingQuest {
         double move = BridgeControl.bridgeMove(80);
         System.out.println(move);
     
-        // the following needs implemented into combatControl.java
+        // the following needs implemented into combatControl.java and wont function yet.
         double atk = 1;
-        double def = 1;
-           
+        double def = 2;
+        int pushTimes= 0;   
+        int holdTimes= 3;
         
-        double pushOut = QuickSandControl.pushOut(atk,def );
-        System.out.println(pushOut+" Times pushed out.");
-        double holdStill = QuickSandControl.pushOut(atk,def);
-        System.out.println(holdStill +" Times held still.");
+        double pushOut = QuickSandControl.pushOut(atk,pushTimes );
+        
+        double holdStill = QuickSandControl.holdStill(def,holdTimes);
+        
+        if (pushOut==3){
+            System.out.println("You have pushed out successfully "+pushOut+" times and escaped.");
+        }
+        else{
+            
+        
+        System.out.println("You have attempted to pushed out "+pushOut+" times.");
+        
+        }
+        if (holdStill==3){
+            System.out.println("You have held still successfully "+holdStill+" times and escaped.");
+        }
+        else{
+            
+        
+        System.out.println("You have attempted to hold still "+holdStill+" times.");
+        
+        }
     }
 }
 

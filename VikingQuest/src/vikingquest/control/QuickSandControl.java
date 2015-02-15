@@ -12,15 +12,14 @@ package vikingquest.control;
 public class QuickSandControl {
     
     
-    public static double pushOut(double atk,double pushTimes){
+    public static double pushOut(double atk,int pushTimes){
         
-        if (pushTimes>0){
-            pushTimes++;
+        if (pushTimes==3){
             return pushTimes;
         }
-        else if(pushTimes==3) {
-            double exceedPushTimes = -1;
-            return exceedPushTimes;
+        else if (pushTimes>=0){
+            pushTimes++;
+            return pushTimes;       
         }
         else{
             pushTimes=0;
@@ -30,19 +29,18 @@ public class QuickSandControl {
         
     }
     
-        public static double holdStill(double def,double holdTimes){
-        
-            if (holdTimes>0&&holdTimes<3){
-            holdTimes++;
+    public static double holdStill(double def,int holdTimes){
+        if (holdTimes==3){
             return holdTimes;
         }
-        else if(holdTimes==3) {
-            double exceedHoldTimes = -1;
-            return exceedHoldTimes;
+        else if (holdTimes>=0){
+            holdTimes++;
+            return holdTimes;       
         }
+        
         else{
             holdTimes=0;
-           return holdTimes; 
+            return holdTimes; 
         }
         
         
