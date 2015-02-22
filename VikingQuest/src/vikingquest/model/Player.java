@@ -12,10 +12,19 @@ import java.util.Objects;
  * @author Madeleine
  */
 public class Player implements Serializable {
+    private String name;
     private String costume;
     private String backpack;
     private double score;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
     public double getScore() {
         return score;
     }
@@ -65,4 +74,3 @@ public class Player implements Serializable {
         
 
 }
-
