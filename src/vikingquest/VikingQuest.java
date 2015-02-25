@@ -3,6 +3,7 @@ package vikingquest;
 import vikingquest.model.Game;
 import vikingquest.model.Player;
 import vikingquest.view.BridgeView;
+import vikingquest.view.GameplayView;
 //import vikingquest.view.StartProgram;
 
 /*import vikingquest.model.Location;
@@ -42,11 +43,13 @@ public class VikingQuest {
     public static void setPlayer(Player player) {
         VikingQuest.player = player;
     }
-    
-    
     public static void main(String[] args) {
-        BridgeView firstBridge = new BridgeView();
-        firstBridge.displayBridgePuzzleMenu();
+        GameplayView game = new GameplayView();
+        game.displayGameplayMenu();
+    
+//    public static void main(String[] args) {
+//        BridgeView firstBridge = new BridgeView();
+//        firstBridge.displayBridgePuzzleMenu();
         
  //       StartProgram startProgram = new StartProgram();
  //       startProgram.startProgram();
