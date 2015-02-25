@@ -10,7 +10,7 @@ package vikingquest.view;
  * @author Nicholas
  */
 public class ItemView {
-    
+//    System.out.println(itemList[]);
     
     
 }
