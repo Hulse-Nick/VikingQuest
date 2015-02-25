@@ -13,7 +13,7 @@ public class BridgeControl {
  
     public static double bridgeMove(double gal){
         double lbPerGal = 8.345404;
-        double degreesMovedPerLb = .023; //this is arbitrary
+        double degreesMovedPerLb = 1; //this is arbitrary
 /*We could put a function here to calculate how much the bridge moves...it'd 
         have to be based on the bridge's weight and length, though...not sure 
         it's worth it. Maybe could just get a random number of degrees per 

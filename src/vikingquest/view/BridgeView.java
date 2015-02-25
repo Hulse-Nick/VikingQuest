@@ -49,17 +49,17 @@ public class BridgeView {
             break;
         }
         
-        return playerInput;
+        return playerInput.toUpperCase();
     }
 
     private void doAction(char selection) {
         
         double targetDegrees = 28;
-        
         double playerDegrees = BridgeControl.bridgeMove(Character.getNumericValue(selection));
-        if (playerDegrees<targetDegrees-1){
+
+        if (playerDegrees<targetDegrees-2){
                 System.out.println("Too little. Add more next time");
-        } else if(playerDegrees>targetDegrees+1){
+        } else if(playerDegrees>targetDegrees+2){
                 System.out.println("Too much. Add less next time");
         } else {
             System.out.println("The bridge is properly positioned. You can cross now!");

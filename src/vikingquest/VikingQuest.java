@@ -3,7 +3,7 @@ package vikingquest;
 import vikingquest.model.Game;
 import vikingquest.model.Player;
 import vikingquest.view.BridgeView;
-import vikingquest.view.StartProgram;
+//import vikingquest.view.StartProgram;
 
 /*import vikingquest.model.Location;
 import vikingquest.model.Obstacle;
