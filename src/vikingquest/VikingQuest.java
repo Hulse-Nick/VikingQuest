@@ -50,7 +50,7 @@ public class VikingQuest {
         
  //       StartProgram startProgram = new StartProgram();
  //       startProgram.startProgram();
-    
+
         // the following needs implemented into combatControl.java and wont function yet.
         /*double atk = 1;
         double def = 2;

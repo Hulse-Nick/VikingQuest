@@ -22,27 +22,27 @@ public class BridgeView {
            +"\n|   Press 'E' to End              |"
            +"\n-----------------------------------" ;
     public void displayBridgePuzzleMenu() {
-        char selection = ' ';
+        String selection;
         do {
             System.out.println(bridgePuzzleMenu); //displays menu strings
             
             String input = this.getInput(); //gets what the user typed
-            selection = input.charAt(0); //gets first character
+            selection = input.substring(0); //gets first character
             
             this.doAction(selection);
-                    }
-        while (selection!='E');
+            }
+        while (selection != "E");
         }
 
     private String getInput() {
         boolean valid = false;
-        String playerInput = " ";
+        String playerInput = "";
         Scanner keyboard = new Scanner(System.in);
         while(!valid){
             playerInput = keyboard.nextLine();
             playerInput = playerInput.trim();
             //check for validity of entry
-            if (playerInput.length()<1|| playerInput.charAt(0)== ' ') {  //|| (playerInput.charAt(0)!= 'N' && playerInput.charAt(0)!= 'H' && playerInput.charAt(0)!= 'S' && playerInput.charAt(0)!= 'L' && playerInput.charAt(0)!= 'E')
+            if (playerInput.length()<1) {
                 System.out.println("Enter a valid value");
                 continue;
             }
@@ -52,18 +52,17 @@ public class BridgeView {
         return playerInput.toUpperCase();
     }
 
-    private void doAction(char selection) {
-        
-        double targetDegrees = 28;
-        double playerDegrees = BridgeControl.bridgeMove(Character.getNumericValue(selection));
-
+    private double doAction(String selection) {
+            double playerGal = Double.valueOf(selection);
+            double targetDegrees = 28;
+        double playerDegrees = BridgeControl.bridgeMove(playerGal);
         if (playerDegrees<targetDegrees-2){
                 System.out.println("Too little. Add more next time");
         } else if(playerDegrees>targetDegrees+2){
                 System.out.println("Too much. Add less next time");
         } else {
             System.out.println("The bridge is properly positioned. You can cross now!");
-        }
+        }            
+        return playerDegrees;
     }
     }
-
