@@ -2,6 +2,7 @@ package vikingquest;
  
 import vikingquest.model.Game;
 import vikingquest.model.Player;
+import vikingquest.view.BridgeView;
 import vikingquest.view.StartProgram;
 
 /*import vikingquest.model.Location;
@@ -44,8 +45,11 @@ public class VikingQuest {
     
     
     public static void main(String[] args) {
-        StartProgram startProgram = new StartProgram();
-        startProgram.startProgram();
+        BridgeView firstBridge = new BridgeView();
+        firstBridge.displayBridgePuzzleMenu();
+        
+ //       StartProgram startProgram = new StartProgram();
+ //       startProgram.startProgram();
     
         // the following needs implemented into combatControl.java and wont function yet.
         /*double atk = 1;
@@ -77,10 +81,3 @@ public class VikingQuest {
         }*/
     }
 }
-
-
-
-
-
-
-        
