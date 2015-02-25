@@ -5,16 +5,17 @@
  */
 package vikingquest.model;
 
-import java.io.Serializable;
 import java.util.Objects;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Nicholas
  */
-public class Ship implements Serializable{
-   private String title;
-   private double health;
+public class Monster {
+    
+    private String title;
+    private String difficulty;
 
     public String getTitle() {
         return title;
@@ -24,27 +25,19 @@ public class Ship implements Serializable{
         this.title = title;
     }
 
-    public double getHealth() {
-        return health;
+    public String getDifficulty() {
+        return difficulty;
     }
 
-    public void setHealth(double health) {
-        this.health = health;
-    }
-
-    public Ship() {
-    }
-
-    @Override
-    public String toString() {
-        return "Ship{" + "title=" + title + ", health=" + health + '}';
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 97 * hash + Objects.hashCode(this.title);
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.health) ^ (Double.doubleToLongBits(this.health) >>> 32));
+        int hash = 3;
+        hash = 61 * hash + Objects.hashCode(this.title);
+        hash = 61 * hash + Objects.hashCode(this.difficulty);
         return hash;
     }
 
@@ -56,15 +49,21 @@ public class Ship implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Ship other = (Ship) obj;
+        final Monster other = (Monster) obj;
         if (!Objects.equals(this.title, other.title)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.health) != Double.doubleToLongBits(other.health)) {
+        if (!Objects.equals(this.difficulty, other.difficulty)) {
             return false;
         }
         return true;
     }
-   
-   
+
+    @Override
+    public String toString() {
+        return "Monster{" + "title=" + title + ", difficulty=" + difficulty + '}';
+    }
+
+    
+    
 }

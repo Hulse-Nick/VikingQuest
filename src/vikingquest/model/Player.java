@@ -15,35 +15,7 @@ public class Player implements Serializable {
     private String name;
     private String costume;
     private String backpack;
-    private String companion;
     private double score;
-    private double attack;
-    private double defense;
-
-    
-    
-    public String getCompanion() {
-        return companion;
-    }
-
-    public void setCompanion(String companion) {
-        this.companion = companion;
-    }
-    public double getAttack() {
-        return attack;
-    }
-
-    public void setAttack(double attack) {
-        this.attack = attack;
-    }
-
-    public double getDefense() {
-        return defense;
-    }
-
-    public void setDefense(double defense) {
-        this.defense = defense;
-    }
 
     public String getName() {
         return name;

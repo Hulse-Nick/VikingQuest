@@ -13,8 +13,14 @@ import java.util.Objects;
  * @author Nicholas
  */
 public class Scene implements Serializable{
+    
+    private boolean combat;
+    private String type;
     private String description;
-    private boolean blocked;
+    private boolean visited;
+    
+    
+    
 
     public String getDescription() {
         return description;
@@ -23,25 +29,46 @@ public class Scene implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public boolean isBlocked() {
-        return blocked;
+    
+    public Scene() {
     }
 
-    public void setBlocked(boolean blocked) {
-        this.blocked = blocked;
+    public boolean isCombat() {
+        return combat;
+    }
+
+    public void setCombat(boolean combat) {
+        this.combat = combat;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
     }
 
     @Override
     public String toString() {
-        return "Scene{" + "description=" + description + ", blocked=" + blocked + '}';
+        return "Scene{" + "combat=" + combat + ", type=" + type + ", description=" + description + ", visited=" + visited + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 47 * hash + Objects.hashCode(this.description);
-        hash = 47 * hash + (this.blocked ? 1 : 0);
+        hash = 17 * hash + (this.combat ? 1 : 0);
+        hash = 17 * hash + Objects.hashCode(this.type);
+        hash = 17 * hash + Objects.hashCode(this.description);
+        hash = 17 * hash + (this.visited ? 1 : 0);
         return hash;
     }
 
@@ -54,18 +81,19 @@ public class Scene implements Serializable{
             return false;
         }
         final Scene other = (Scene) obj;
+        if (this.combat != other.combat) {
+            return false;
+        }
+        if (!Objects.equals(this.type, other.type)) {
+            return false;
+        }
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
-        if (this.blocked != other.blocked) {
+        if (this.visited != other.visited) {
             return false;
         }
         return true;
-    }
-
-    
-    
-    public Scene() {
     }
     
     
