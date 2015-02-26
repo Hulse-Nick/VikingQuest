@@ -58,7 +58,7 @@ public class QuickSandControl {
         return quickSand();
     }
 
-        public String getInput(String a, int b) {
+        public String getInput() {
         boolean valid = false;
         String playerInput = "";
         Scanner keyboard = new Scanner(System.in);
