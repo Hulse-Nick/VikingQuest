@@ -4,6 +4,7 @@ import vikingquest.model.Game;
 import vikingquest.model.Player;
 import vikingquest.view.BridgeView;
 import vikingquest.view.GameplayView;
+import vikingquest.view.ItemView;
 //import vikingquest.view.StartProgram;
 
 /*import vikingquest.model.Location;
@@ -44,43 +45,19 @@ public class VikingQuest {
         VikingQuest.player = player;
     }
     public static void main(String[] args) {
-        GameplayView game = new GameplayView();
-        game.displayGameplayMenu();
-    
+//        GameplayView game = new GameplayView();
+//        game.displayGameplayMenu();
+
+        ItemView inventory = new ItemView();
+        inventory.displayItemMenu();
+  
 //    public static void main(String[] args) {
 //        BridgeView firstBridge = new BridgeView();
 //        firstBridge.displayBridgePuzzleMenu();
         
  //       StartProgram startProgram = new StartProgram();
  //       startProgram.startProgram();
+   
 
-        // the following needs implemented into combatControl.java and wont function yet.
-        /*double atk = 1;
-        double def = 2;
-        int pushTimes= 0;   
-        int holdTimes= 3;
-        
-        double pushOut = QuickSandControl.pushOut(atk,pushTimes );
-        
-        double holdStill = QuickSandControl.holdStill(def,holdTimes);
-        
-        if (pushOut==3){
-            System.out.println("You have pushed out successfully "+pushOut+" times and escaped.");
-        }
-        else{
-            
-        
-        System.out.println("You have attempted to pushed out "+pushOut+" times.");
-        
-        }
-        if (holdStill==3){
-            System.out.println("You have held still successfully "+holdStill+" times and escaped.");
-        }
-        else{
-            
-        
-        System.out.println("You have attempted to hold still "+holdStill+" times.");
-        
-        }*/
     }
 }

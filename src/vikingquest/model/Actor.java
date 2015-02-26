@@ -12,11 +12,11 @@ import java.util.Objects;
  * @author Madeleine
  */
 public class Actor implements Serializable{
-    private String name;
-    private double hp;
-    private double attack;
-    private double defense;
-    private String special;
+    public String name;
+    public double hp;
+    public double attack;
+    public double defense;
+    public String special;
 
     
     public double getHp() {
