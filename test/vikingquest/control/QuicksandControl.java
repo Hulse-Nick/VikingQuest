@@ -33,7 +33,7 @@ public class QuicksandControl {
         else if (selection == 'P'){
             inputResult=(Math.round((Math.random()) * 20)*100)/100 + (attack/2);
         }
-        //System.out.println(inputResult);
+        System.out.println(inputResult);
         //return failure or success
         if ( inputResult > difficulty){
             return true;
