@@ -32,7 +32,7 @@ public class ItemView {
            +"\n-----------------------------------"
            +"\n|      Intentory Options:         |"
            +"\n-----------------------------------"
-           +"\n| 'S' - Select an item            |"
+           +"\n| '1-6' - Select an item            |"
            +"\n| 'E' - View Equipped items       |"
            +"\n| 'X' - Close inventory           |"
            +"\n-----------------------------------" ;

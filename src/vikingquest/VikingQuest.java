@@ -1,5 +1,6 @@
 package vikingquest;
  
+import vikingquest.control.QuicksandControl;
 import vikingquest.model.Game;
 import vikingquest.model.Player;
 import vikingquest.view.BridgeView;
@@ -48,9 +49,12 @@ public class VikingQuest {
 //        GameplayView game = new GameplayView();
 //        game.displayGameplayMenu();
 
-        ItemView inventory = new ItemView();
-        inventory.displayItemMenu();
-  
+//        ItemView inventory = new ItemView();
+//        inventory.displayItemMenu();
+        
+        QuicksandControl quicksand = new QuicksandControl();
+        quicksand.displayQuicksandMenu() ; 
+        
 //    public static void main(String[] args) {
 //        BridgeView firstBridge = new BridgeView();
 //        firstBridge.displayBridgePuzzleMenu();
