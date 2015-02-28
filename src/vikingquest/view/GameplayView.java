@@ -102,7 +102,7 @@ public class GameplayView {
         System.out.println("*** move(S) function called--you moved South ***");
     }
         if (dir=='W'){
-        System.out.println("*** move(W) function called--you moved West ***");
+        System.out.println("*** move(W) function called--you moved W ***");
     }
     }
 
