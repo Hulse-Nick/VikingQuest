@@ -27,7 +27,9 @@ public class QuicksandControl {
         //determine whether to use attack or defense
         if (selection == 'H'){
             inputResult=(Math.round((Math.random()) * 20)*100)/100 + (defense/2);
+        
         }
+        
         else if (selection == 'P'){
             inputResult=(Math.round((Math.random()) * 20)*100)/100 + (attack/2);
         }

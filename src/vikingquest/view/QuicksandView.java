@@ -52,8 +52,9 @@ public class QuicksandView {
                 failedAttempts +=1;
                 System.out.println(failed+" You have failed "+failedAttempts+" time(s)");
         }
+        
         }
-        while (selection != 'E' && successAttempts<3 && failedAttempts < 3);
+        while (selection != 'E' && successAttempts<3 && failedAttempts < 3 );
         
         if (successAttempts >= 3){
                 System.out.println(gotOut);
@@ -62,6 +63,7 @@ public class QuicksandView {
                 System.out.println(died);
             }
         //check the attempts
+            
             
         }
 
@@ -86,10 +88,10 @@ public class QuicksandView {
         public void doAction(char selection) {
         switch (selection){
             case 'H': //new game
-                this.quicksand('H');
+               // this.quicksand('H');
                 break;
             case 'P': //help
-                this.quicksand('P');
+                //this.quicksand('P');
                 break;
             case 'E': //Exit
                 return;
