@@ -100,7 +100,7 @@ public class QuicksandView {
                 break;
         }
         }
-private void quicksand(char selection) {
-        boolean roll = QuicksandControl.roll(selection);
-}
+//private void quicksand(char selection) {
+//        boolean roll = QuicksandControl.roll(selection);
+//}
 }
