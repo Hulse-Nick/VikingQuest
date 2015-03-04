@@ -12,8 +12,9 @@ import vikingquest.control.QuicksandControl;
  *
  * @author Madeleine
  */
-public class QuicksandView {
-    public String QuicksandMenu = "\n"
+public class QuicksandView extends View {
+    public QuicksandView() { 
+            super("\n"
         + "\n---------------------------"
         + "\n|        Quicksand        |"
         + "\n---------------------------"
@@ -23,8 +24,16 @@ public class QuicksandView {
         + "\n|     P-Pull legs         |"
         + "\n|                         |"
         + "\n|        E-End            |"
-        + "\n---------------------------";
- 
+        + "\n---------------------------");
+    }
+    @Override
+    public boolean doAction (Object obj){
+        String value = (String) obj;
+        value= value.toUpperCase();// convert to all upper case
+        char choice = value.charAt(0);//get first character entered
+        
+        return choice;
+    }
     
     public void displayQuicksandMenu() {
         char selection;
@@ -103,4 +112,6 @@ public class QuicksandView {
 //private void quicksand(char selection) {
 //        boolean roll = QuicksandControl.roll(selection);
 //}
+
+   
 }
