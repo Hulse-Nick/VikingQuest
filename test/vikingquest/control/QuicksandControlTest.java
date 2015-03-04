@@ -5,6 +5,7 @@
  */
 package vikingquest.control;
 
+//import vikingquest.control.QuicksandControl;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
