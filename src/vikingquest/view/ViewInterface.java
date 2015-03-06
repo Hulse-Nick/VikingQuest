@@ -13,7 +13,7 @@ public interface ViewInterface {
     
     public void display();
     public String getInput();
-    //data types weren't matching between doAction in this class and doAction in QuicksandView--boolean vs. char--I changed this one to fit Quicksand
+    //here's where I changed data types
     public char doAction(Object obj);
     
 }
