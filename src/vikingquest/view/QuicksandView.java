@@ -14,6 +14,7 @@ import vikingquest.control.QuicksandControl;
  */
 public class QuicksandView extends View {
     public QuicksandView() { 
+        //why is the menu in here? I'm not being sarcastic, I'm just lost
             super("\n"
         + "\n---------------------------"
         + "\n|        Quicksand        |"
@@ -26,12 +27,22 @@ public class QuicksandView extends View {
         + "\n|        E-End            |"
         + "\n---------------------------");
     }
+    String MENU ="\n"
+        + "\n---------------------------"
+        + "\n|        Quicksand        |"
+        + "\n---------------------------"
+        + "\n|   To escape you may:    |"
+        + "\n|                         |"
+        + "\n|     H-Hold Still        |"
+        + "\n|     P-Pull legs         |"
+        + "\n|                         |"
+        + "\n|        E-End            |"
+        + "\n---------------------------";
     @Override
-    public boolean doAction (Object obj){
+    public char doAction (Object obj){
         String value = (String) obj;
         value= value.toUpperCase();// convert to all upper case
         char choice = value.charAt(0);//get first character entered
-        
         return choice;
     }
     
@@ -47,7 +58,7 @@ public class QuicksandView extends View {
     String died= "\n You died."
             +"\nPlease Try again";
         do{
-            System.out.println(QuicksandMenu); //displays menu strings
+            System.out.println(MENU); //displays menu strings
             
             String input = this.getQuicksandInput(); //gets what the user typed
             selection = input.charAt(0);

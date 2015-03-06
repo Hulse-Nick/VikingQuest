@@ -5,6 +5,7 @@
  */
 package vikingquest.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.logging.Logger;
 
@@ -12,7 +13,7 @@ import java.util.logging.Logger;
  *
  * @author Nicholas
  */
-public class Monster {
+public class Monster implements Serializable{
     
     private String title;
     private String difficulty;
@@ -33,6 +34,9 @@ public class Monster {
         this.difficulty = difficulty;
     }
 
+    public Monster() {
+    }
+    
     @Override
     public int hashCode() {
         int hash = 3;
@@ -64,6 +68,4 @@ public class Monster {
         return "Monster{" + "title=" + title + ", difficulty=" + difficulty + '}';
     }
 
-    
-    
 }
