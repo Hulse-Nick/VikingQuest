@@ -11,7 +11,22 @@ import java.util.Scanner;
  *
  * @author Madeleine
  */
-public class GameplayView {
+public class GameplayView extends View{
+    public GameplayView(){
+    super("\n"
+            +"\n----------------------------------"
+            +"\n|       What will you do?        |"
+            +"\n----------------------------------"
+            +"\nL - Look at your surroundings"
+            +"\nN - move North"
+            +"\nE - move East"
+            +"\nS - move South"
+            +"\nW - move West"
+            +"\nI - check Inventory"
+            +"\nB - consult the Book"
+            +"\n----------------------------------"
+            +"\n  (dev purposes only: X to leave) ");
+            }
         private final String GAMEPLAYMENU = "\n"
             +"\n----------------------------------"
             +"\n|       What will you do?        |"
@@ -25,12 +40,21 @@ public class GameplayView {
             +"\nB - consult the Book"
             +"\n----------------------------------"
             +"\n  (dev purposes only: X to leave) ";
-    public void displayGameplayMenu() {
+
+        @Override
+        public char doAction (Object obj){
+        String value = (String) obj;
+        value= value.toUpperCase();// convert to all upper case
+        char choice = value.charAt(0);//get first character entered
+        return choice;
+        }
+        
+        public void displayGameplayMenu() {
         char selection = ' ';
         do {
             System.out.println(GAMEPLAYMENU); //displays menu strings
             
-            String input = this.getInput(); //gets what the user typed
+            String input = this.getGameplayInput(); //gets what the user typed
             selection = input.charAt(0); //gets first character
             
             this.doAction(selection);
@@ -38,7 +62,7 @@ public class GameplayView {
         while (selection!='X');
         }
 
-    private String getInput() {
+    private String getGameplayInput() {
         boolean valid = false;
         String playerInput = " ";
         Scanner keyboard = new Scanner(System.in);
