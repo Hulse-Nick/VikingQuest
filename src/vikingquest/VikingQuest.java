@@ -3,9 +3,9 @@ package vikingquest;
 
 import vikingquest.model.Game;
 import vikingquest.model.Player;
-import vikingquest.view.QuicksandView;
+//import vikingquest.view.QuicksandView;
 //import vikingquest.view.BridgeView;
-//import vikingquest.view.GameplayView;
+import vikingquest.view.GameplayView;
 //import vikingquest.view.ItemView;
 //import vikingquest.view.StartProgram;
 
@@ -44,13 +44,14 @@ public class VikingQuest {
     }
 
     public static void main(String[] args) {
-//        GameplayView game = new GameplayView();
-//        game.displayGameplayMenu();
+        GameplayView game = new GameplayView();
+        game.displayGameplayMenu();
 
 //        ItemView inventory = new ItemView();
 //        inventory.displayItemMenu();
-        QuicksandView quicksand = new QuicksandView();
-        quicksand.displayQuicksandMenu();
+        
+//        QuicksandView quicksand = new QuicksandView();
+//        quicksand.displayQuicksandMenu();
 
 //    public static void main(String[] args) {
 //        BridgeView firstBridge = new BridgeView();
