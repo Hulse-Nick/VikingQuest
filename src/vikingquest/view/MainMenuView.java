@@ -6,6 +6,8 @@
 package vikingquest.view;
 
 import java.util.Scanner;
+import vikingquest.VikingQuest;
+import vikingquest.control.GameControl;
 
 /**
  *
@@ -77,7 +79,11 @@ public class MainMenuView {
         }
 
     private void startNewGame() {
-        System.out.println("*** startNewGame function called ***"); 
+        //create a new game
+        GameControl.createNewGame(VikingQuest.getPlayer());
+        //System.out.println("*** startNewGame function called ***"); 
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void displayHelpMenu() {
