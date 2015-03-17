@@ -12,16 +12,16 @@ import vikingquest.model.Item;
  * @author Nicholas
  */
 public class ItemControl {
-    public Item[] bagItemList;
+    
     public String[] equippedList;
-  
+//    public Item[] bagItemList;
+    public int[] bagItemAtkList;  
     
-    
-    Item dullSword;
-public Item brokenHelm = new Item();
-    public Item rock = new Item();
-    public Item raggedPants = new Item();
-    public Item healPotion = new Item();
+    public Item dullSword;
+    public Item brokenHelm;
+    public Item rock;
+    public Item raggedPants;
+    public Item healPotion;
     
     
     public ItemControl() {
@@ -33,14 +33,28 @@ public Item brokenHelm = new Item();
             dullSword.setTitle("Dull Sword");
             dullSword.setUsesLeft(100);
             dullSword.setWeight(2);};
-        String stats = dullSword.toString();
+//        String stats = dullSword.toString();
+        
+    //trying to set the stats of this Item. don't know hy it won't work, but hey. 
+//        this.brokenHelm = new Item;
+//            this.brokenHelm.setAttack(0);
    
-    public void startingBagItems(){
-        bagItemList [0]= dullSword;
-        bagItemList [1]= brokenHelm;
-        bagItemList [2]= rock;
-        bagItemList [3]= raggedPants;
-        bagItemList [4]= healPotion;
+//    public double[] startingBagItems(){
+//        bagItemList[0]= dullSword.attack;
+//        bagItemList [1]= brokenHelm.attack;
+//        bagItemList [2]= rock.attack;
+//        bagItemList [3]= raggedPants.attack;
+//        bagItemList [4]= healPotion.attack;
+//        return bagItemList;
+//    }
+    
+    public int[] startingBagItemAttack(){
+        bagItemAtkList [0]= dullSword.getAttack();
+        bagItemAtkList [1]= brokenHelm.getAttack();
+        bagItemAtkList [2]= rock.getAttack();
+        bagItemAtkList [3]= raggedPants.getAttack();
+        bagItemAtkList [4]= healPotion.getAttack();
+        return bagItemAtkList;
     }
     
     public void startingGear(){
@@ -55,13 +69,18 @@ public Item brokenHelm = new Item();
 
     }
     
-    public static void main(String args[]){
-    int i;
-    
-    //was trying to get the names of items to be returned to the view. Bleh.
-//    for (i=0;i<bagItemList[].length-1;i++){
-//            String name = bagItemList[i].title;
-//    }
+    public void main(String args[]){ 
+    //trying to get the item with the highest attack returned. Bleh.
+
+}
+            public int optimizeWeapon(){ 
+    int maxValue = bagItemAtkList[0];
+    for (int i : bagItemAtkList){
+            if (bagItemAtkList[i]>maxValue){
+                maxValue = bagItemAtkList[i];
+        }
+    }
+    return maxValue;
 }
 //    public void displaybatItemList(){
 //        String selection;

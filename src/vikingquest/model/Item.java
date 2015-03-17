@@ -17,7 +17,8 @@ public class Item {
     private double usesLeft;
     private double weight;
     private String title;
-    private double attack;
+    private int attack;
+//    private double attack;
     private double defense;
     private String special;
     
@@ -57,11 +58,13 @@ public class Item {
         this.title = title;
     }
 
-    public double getAttack() {
+    public int getAttack() {
+//      public double getAttack() {
         return attack;
     }
 
-    public void setAttack(double attack) {
+    public void setAttack(int attack) {
+        //public void setAttack(double attack) {
         this.attack = attack;
     }
 
