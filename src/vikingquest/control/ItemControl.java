@@ -5,23 +5,43 @@
  */
 package vikingquest.control;
 
+import vikingquest.model.Item;
+
 /**
  *
  * @author Nicholas
  */
 public class ItemControl {
-    public String[] bagItemList;
+    public Item[] bagItemList;
     public String[] equippedList;
+  
     
+    
+    Item dullSword;
+public Item brokenHelm = new Item();
+    public Item rock = new Item();
+    public Item raggedPants = new Item();
+    public Item healPotion = new Item();
+    
+    
+    public ItemControl() {
+        this.dullSword = new Item();
+            dullSword.setAttack(1);
+            dullSword.setDefense(0);
+            dullSword.setItemType("wpn");
+            dullSword.setSpecial(null);
+            dullSword.setTitle("Dull Sword");
+            dullSword.setUsesLeft(100);
+            dullSword.setWeight(2);};
+        String stats = dullSword.toString();
+   
     public void startingBagItems(){
-        bagItemList [0]= "Dull Sword";
-        bagItemList [1]= "Broken Helm";
-        bagItemList [2]= "Rock";
-        bagItemList [3]= "Ragged pants";
-        bagItemList [4]= "Healing Potion";
-
+        bagItemList [0]= dullSword;
+        bagItemList [1]= brokenHelm;
+        bagItemList [2]= rock;
+        bagItemList [3]= raggedPants;
+        bagItemList [4]= healPotion;
     }
-    
     
     public void startingGear(){
    //Assigns starting equipped gear.
@@ -35,6 +55,14 @@ public class ItemControl {
 
     }
     
+    public static void main(String args[]){
+    int i;
+    
+    //was trying to get the names of items to be returned to the view. Bleh.
+//    for (i=0;i<bagItemList[].length-1;i++){
+//            String name = bagItemList[i].title;
+//    }
+}
 //    public void displaybatItemList(){
 //        String selection;
 //        do {
