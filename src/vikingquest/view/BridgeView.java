@@ -29,7 +29,7 @@ public class BridgeView {
             String input = this.getInput(); //gets what the user typed
             selection = input.substring(0); //gets first character
             
-            this.doAction(selection);
+//            this.doAction(selection);
             }
         while (selection != "E");
         }
@@ -52,17 +52,17 @@ public class BridgeView {
         return playerInput.toUpperCase();
     }
 
-    private double doAction(String selection) {
-            double playerGal = Double.valueOf(selection);
-            double targetDegrees = 28;
-        double playerDegrees = BridgeControl.bridgeMove(playerGal);
-        if (playerDegrees<targetDegrees-2){
-                System.out.println("Too little. Add more next time");
-        } else if(playerDegrees>targetDegrees+2){
-                System.out.println("Too much. Add less next time");
-        } else {
-            System.out.println("The bridge is properly positioned. You can cross now!");
-        }            
-        return playerDegrees;
-    }
+//    private double doAction(String selection) {
+//            double playerGal = Double.valueOf(selection);
+//            double targetDegrees = 28;
+//        double playerDegrees = BridgeControl.bridgeMove(playerGal);
+//        if (playerDegrees<targetDegrees-2){
+//                System.out.println("Too little. Add more next time");
+//        } else if(playerDegrees>targetDegrees+2){
+//                System.out.println("Too much. Add less next time");
+//        } else {
+//            System.out.println("The bridge is properly positioned. You can cross now!");
+//        }            
+//        return playerDegrees;
+//    }
     }
